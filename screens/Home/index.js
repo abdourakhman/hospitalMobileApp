@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, FlatList, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, FlatList, TouchableOpacity, Pressable } from 'react-native'
 import React from 'react'
 import dashboardStyles from './styles'
 import ACTIVITIES from '../../data/fakeActivities'
@@ -43,10 +43,12 @@ const Home = () => {
         />
         <View style={dashboardStyles.symptomQuestion}>
           <Text style={dashboardStyles.textDoctor}>Nos docteurs</Text>
-          <Text style={dashboardStyles.moreDoctor}>Tout afficher...</Text>
+          <Pressable>
+            <Text style={dashboardStyles.moreDoctor}>Tout afficher...</Text>
+          </Pressable>
         </View>
         {
-          DOCTORS.map(doctor => {
+          DOCTORS.slice(0,4).map(doctor => {
             return (
               <TouchableOpacity key={doctor.id} style={dashboardStyles.doctorItem}>
                 <View style={dashboardStyles.doctorProfile}>
