@@ -1,10 +1,10 @@
-import { View, Text, TouchableOpacity, FlatList, Image } from 'react-native'
+import { FlatList } from 'react-native'
 import React from 'react'
 import MESSAGES from '../../data/fakeMessage'
 import DOCTORS from '../../data/fakeDoctor'
-import styles from './style'
+import MessageItem from '../../component/MessageItem'
 
-const Message = () => {
+const Message = ({navigation} ) => {
   return (
     <FlatList
       data={MESSAGES}
@@ -13,14 +13,7 @@ const Message = () => {
         let rand = Math.floor(Math.random()*DOCTORS.length);
         item.image = DOCTORS[rand].image
         return (
-          <TouchableOpacity style={styles.msgContainer} >
-            <Image source={{uri:`${item.image}`}} style={styles.imgUsrMsg} />
-            <View style={styles.usrMsg} >
-              <Text style={styles.username} > {item.fullName} </Text>
-              <Text style={styles.msgText} > {item.lastMessage} </Text>
-              <Text style={styles.dateMsg} > {item.date} </Text>
-            </View>
-          </TouchableOpacity>
+          <MessageItem item={item} navigation={navigation} />
         )
       }}
     >

@@ -3,4 +3,6 @@ https://medium.com/mtholla/react-native-how-to-use-svgs-193e384e1d1b
 
 undraw.co //for svg image
 
-https://mockturtle.net/  //por generer des data json 
+https://mockturtle.net/  //por generer des data json
+
+package dayjs // formatage des dates 

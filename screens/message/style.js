@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     msgContainer:{
         marginTop:10,
         marginHorizontal:5,
-        backgroundColor:"white",
+        backgroundColor:COLORS.grey,
         elevation:5,
         borderRadius:5,
         paddingHorizontal:15,
