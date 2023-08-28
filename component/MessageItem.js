@@ -10,9 +10,9 @@ const MessageItem = ({item, navigation} ) => {
     <TouchableOpacity style={styles.msgContainer} onPress={()=>navigation.navigate('MessageDetail',{item})} >
         <Image source={{uri:`${item.image}`}} style={styles.imgUsrMsg} />
         <View style={styles.usrMsg} >
-        <Text style={styles.username} > {item.fullName} </Text>
-        <Text style={styles.msgText} > {item.lastMessage} </Text>
-        <Text style={styles.dateMsg} > {dayjs(item.date).fromNow(true)} </Text>
+          <Text style={styles.username} > {item.fullName} </Text>
+          <Text style={styles.msgText} > {item.lastMessage} </Text>
+          <Text style={styles.dateMsg} > {dayjs(item.date).fromNow(true)} </Text>
         </View>
     </TouchableOpacity>
   )

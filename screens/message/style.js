@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     dateMsg:{
         color:"black",
         fontSize:14,
-        fontWeight:"light"
+        fontWeight:"light",
     }
 })
 

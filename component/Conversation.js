@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../screens/messageDetail/style'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import dayjs from 'dayjs'
+import { COLORS } from '../helpers/constant'
 dayjs.extend(relativeTime)
 
 const Conversation = ({item}) => {
@@ -10,11 +11,22 @@ const Conversation = ({item}) => {
   return (
     <View style={[
         styles.container,
-        {backgroundColor:isMine ? 'lightblue':'white'},
+        {backgroundColor:isMine ? COLORS.main:'white'},
         {alignSelf:isMine ? 'flex-end':'flex-start'}
         ]} >
-      <Text>{item.message} </Text>
-      <Text>{dayjs(item.sendingAt).fromNow(true)} </Text>
+      <Text style={{
+        color:isMine ? "white":'null',
+        alignSelf:isMine ? 'flex-end':'flex-start'
+        }}>
+            {item.message} 
+      </Text>
+      <Text style={{
+        color:isMine ? "white":'null',
+        alignSelf:isMine ? 'flex-end':'flex-start'
+        }}
+        >
+            {dayjs(item.sendingAt).fromNow(true)} 
+        </Text>
     </View>
   )
 }

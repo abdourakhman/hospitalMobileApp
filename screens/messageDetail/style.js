@@ -10,6 +10,29 @@ const styles = StyleSheet.create({
         elevation:2,
         borderRadius:10
     },
+    containerInput:{
+        padding:5,
+        flexDirection:'row',
+        justifyContent:"space-between",
+        backgroundColor:'#eee',
+    },
+    input:{
+        flex:1,
+        backgroundColor:'white',
+        borderWidth:2,
+        borderTopColor:"white",
+        borderBottomColor:"white",
+        borderLeftColor:COLORS.main,
+        borderRightColor:COLORS.main,
+    },
+    send:{
+        color:"white",
+        backgroundColor:COLORS.main,
+        padding:10,
+        paddingHorizontal:15,
+        paddingVertical:15,
+        alignItems:"center",
+    }
 })
 
 export default styles;
